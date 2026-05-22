@@ -6,9 +6,14 @@ import static org.junit.jupiter.api.Assertions.*;
 public class FelineTest {
 
     @Test
-    public void testEatMeatReturnsCorrectFood() throws Exception {
+    public void testEatMeatReturnsNotNull() throws Exception {
         Feline feline = new Feline();
         assertNotNull(feline.eatMeat());
+    }
+
+    @Test
+    public void testEatMeatReturnsThreeFoodItems() throws Exception {
+        Feline feline = new Feline();
         assertEquals(3, feline.eatMeat().size());
     }
 
